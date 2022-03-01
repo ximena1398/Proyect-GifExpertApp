@@ -13,7 +13,7 @@ export const AddCategory = ({ setCategories }) => {
     const handleSubmit = (e) => {
         e.preventDefault(); //para evitar que el form (formulario) renderice toda la página
         if(inputValue.trim().length > 2){
-            setCategories(catgs => [...catgs, inputValue]);
+            setCategories(catgs => [inputValue, ...catgs]);
             setinputValue('');
         }
     }
